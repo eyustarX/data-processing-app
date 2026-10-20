@@ -2,7 +2,7 @@
 
 A clean, modular Python application that loads raw datasets, performs multi-stage sanitization using pure functions, and processes calculations with high-performance **NumPy** vectorization.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_GITHUB_USERNAME/data-processing-app/blob/main/notebooks/data_analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/notebooks/data_analysis.ipynb)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![NumPy](https://img.shields.io/badge/NumPy-Vectorized-013243?logo=numpy)](https://numpy.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -54,7 +54,7 @@ data_processing_app/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/data-processing-app.git
+git clone https://github.com/eyustarX/data-processing-app.git
 cd data-processing-app
 ```
 
