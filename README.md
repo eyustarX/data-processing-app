@@ -3,6 +3,7 @@
 A clean, modular Python application that loads raw datasets, performs multi-stage sanitization using pure functions, and processes calculations with high-performance **NumPy** vectorization.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/notebooks/data_analysis.ipynb)
+[![CI Pipeline](https://github.com/eyustarX/data-processing-app/actions/workflows/ci.yml/badge.svg)](https://github.com/eyustarX/data-processing-app/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![NumPy](https://img.shields.io/badge/NumPy-Vectorized-013243?logo=numpy)](https://numpy.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -31,8 +32,12 @@ Replace `<YOUR_GITHUB_USERNAME>` and `<YOUR_REPOSITORY_NAME>` with your actual G
 ```text
 data_processing_app/
 │
+├── .github/
+│   └── workflows/ci.yml         # GitHub Actions automated test & run pipeline
+│
 ├── data/
-│   └── raw_sales_data.csv       # Raw dataset containing dirty records, NaNs, duplicates
+│   ├── raw_sales_data.csv       # Raw dataset containing dirty records, NaNs, duplicates
+│   └── processed_sales_data.csv # Output dataset cleaned and enriched with NumPy metrics
 │
 ├── notebooks/
 │   └── data_analysis.ipynb      # Interactive Jupyter / Colab notebook with charts & steps
@@ -42,7 +47,12 @@ data_processing_app/
 │   ├── data_cleaning.py         # Dedicated cleaning functions (dedup, null imputation, etc.)
 │   └── data_processing.py       # NumPy vectorized calculations and statistical metrics
 │
+├── tests/
+│   ├── __init__.py
+│   └── test_pipeline.py         # Automated unit tests for cleaning & NumPy computations
+│
 ├── .gitignore                   # Ignore .venv, __pycache__, checkpoints
+├── LICENSE                      # MIT Open Source License
 ├── main.py                      # CLI runner script
 ├── requirements.txt             # Project dependencies (numpy, pandas, jupyter, matplotlib)
 └── README.md                    # Project documentation & GitHub guide
@@ -79,6 +89,11 @@ pip install -r requirements.txt
 ```
 
 ### 4. Run the Application
+
+- **Run Automated Unit Tests:**
+  ```bash
+  python -m unittest discover -s tests -v
+  ```
 
 - **Run via Terminal (CLI):**
   ```bash

@@ -51,6 +51,11 @@ def main():
     print(f"    - Max Revenue   : ${stats['max']:,.2f}")
     print(f"    - 25th / 75th % : ${stats['p25']:,.2f} / ${stats['p75']:,.2f}")
 
+    # 5. Export Processed Data
+    output_path = base_dir / "data" / "processed_sales_data.csv"
+    cleaned_df.to_csv(output_path, index=False)
+    print(f"\n[5] Saved processed dataset to: {output_path.name}")
+
     print("\n" + "=" * 60)
     print("Data processing pipeline completed successfully!")
     print("=" * 60)

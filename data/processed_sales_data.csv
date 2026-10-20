@@ -1,0 +1,10 @@
+order_id,date,product,category,unit_price,quantity,discount_pct,city,gross_revenue,net_revenue,normalized_score
+1001,2024-01-05,Laptop,Electronics,1200.0,2,0.1,New York,2400.0,2160.0,1.0
+1002,2024-01-06,Wireless Mouse,Electronics,25.0,10,0.05,Los Angeles,250.0,237.5,0.07793764988009592
+1003,2024-01-08,Desk Chair,Furniture,150.0,3,0.0,Chicago,450.0,450.0,0.17985611510791366
+1005,2024-01-12,Mechanical Keyboard,Electronics,85.0,4,0.15,Unknown,340.0,289.0,0.1026378896882494
+1006,2024-01-15,Coffee Mug,Kitchen,15.0,5,0.0,New York,75.0,75.0,0.0
+1009,2024-01-22,Desk Lamp,Furniture,45.0,3,0.0,Seattle,135.0,135.0,0.02877697841726619
+1010,2024-01-25,Water Bottle,Kitchen,20.0,8,0.2,Los Angeles,160.0,128.0,0.02541966426858513
+1011,2024-01-28,Headphones,Electronics,90.0,5,0.1,Chicago,450.0,405.0,0.15827338129496402
+1012,2024-01-30,Standing Desk,Furniture,400.0,2,0.0,Houston,800.0,800.0,0.34772182254196643
