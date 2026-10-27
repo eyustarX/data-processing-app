@@ -1,0 +1,6 @@
+# Week 02: Mini Semantic Search Dependencies
+chromadb>=0.4.22
+pandas>=2.0.0
+numpy>=1.24.0
+jupyter>=1.0.0
+sentence-transformers>=2.2.0

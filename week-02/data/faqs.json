@@ -1,0 +1,74 @@
+[
+  {
+    "id": "faq-001",
+    "category": "AWS Compute",
+    "question": "What is Amazon EC2 and when should I use it?",
+    "answer": "Amazon Elastic Compute Cloud (Amazon EC2) provides scalable virtual servers (instances) in the cloud. You should use EC2 when you need complete control over your operating system, custom software stacks, high-performance compute clusters, or continuous background processing."
+  },
+  {
+    "id": "faq-002",
+    "category": "AWS Storage",
+    "question": "How does Amazon S3 storage classes and pricing work?",
+    "answer": "Amazon Simple Storage Service (Amazon S3) is an object storage service offering 99.999999999% (11 9s) data durability. Pricing is based on storage volume (GB/month), requests (GET, PUT), and data transfer out. Classes include S3 Standard for frequent access, S3 Intelligent-Tiering for automatic cost optimization, and S3 Glacier for long-term archiving."
+  },
+  {
+    "id": "faq-003",
+    "category": "AWS Serverless",
+    "question": "What is AWS Lambda and how does serverless execution work?",
+    "answer": "AWS Lambda is a serverless, event-driven compute service that lets you run code without provisioning or managing servers. You pay only for the compute time you consume, measured in millisecond increments, triggered by HTTP requests via API Gateway, S3 events, or DynamoDB streams."
+  },
+  {
+    "id": "faq-004",
+    "category": "AWS Security",
+    "question": "How do I secure my AWS infrastructure using IAM policies and least privilege?",
+    "answer": "AWS Identity and Access Management (IAM) controls authentication and authorization. Follow the principle of least privilege by granting only the minimum permissions required for specific roles or users. Use IAM roles for EC2 instances and Lambda functions instead of embedding permanent access keys."
+  },
+  {
+    "id": "faq-005",
+    "category": "AWS AI/ML",
+    "question": "What is Amazon SageMaker and what are its key capabilities?",
+    "answer": "Amazon SageMaker is a fully managed machine learning platform that enables data scientists and developers to build, train, tune, and deploy machine learning and deep learning models at scale. It includes SageMaker Studio, automated model tuning, distributed training, and managed real-time or serverless endpoints."
+  },
+  {
+    "id": "faq-006",
+    "category": "AWS Generative AI",
+    "question": "What is Amazon Bedrock and how does it support foundation models?",
+    "answer": "Amazon Bedrock is a fully managed service that offers a choice of high-performing foundation models (FMs) from leading AI companies like Anthropic, AI21 Labs, Cohere, Meta, Mistral AI, and Amazon via a single API, alongside a broad set of capabilities to build generative AI applications with security, privacy, and responsible AI."
+  },
+  {
+    "id": "faq-007",
+    "category": "Vector DB & RAG",
+    "question": "What is ChromaDB and how does it store vector embeddings?",
+    "answer": "Chroma is an open-source, AI-native embedding database (vector store) designed to make building LLM apps simple. Chroma stores high-dimensional vector representations of text documents alongside metadata and raw document text, enabling sub-millisecond approximate nearest neighbor (ANN) similarity search."
+  },
+  {
+    "id": "faq-008",
+    "category": "Vector DB & RAG",
+    "question": "What is semantic search and how does it differ from keyword search?",
+    "answer": "Semantic search seeks to understand the natural language intent and contextual meaning of a search query rather than simply matching literal keywords. By converting text into dense mathematical embedding vectors, semantic search finds conceptual matches even when different vocabulary is used."
+  },
+  {
+    "id": "faq-009",
+    "category": "Vector DB & RAG",
+    "question": "Why is text chunking important in Retrieval Augmented Generation (RAG)?",
+    "answer": "Text chunking breaks large documents into smaller, coherent passages before generating embeddings. Proper chunking prevents dilution of semantic meaning across large texts, fits within embedding model context limits, and ensures the retrieval engine returns specific, relevant context to the language model."
+  },
+  {
+    "id": "faq-010",
+    "category": "AWS AI/ML",
+    "question": "What is Amazon Kendra and how does it implement enterprise search?",
+    "answer": "Amazon Kendra is an intelligent enterprise search service powered by machine learning. Kendra uses natural language processing (NLP) to return direct answers to user questions from unstructured content across document repositories like SharePoint, Confluence, and S3."
+  },
+  {
+    "id": "faq-011",
+    "category": "AWS AI/ML",
+    "question": "How does Amazon Comprehend perform natural language processing?",
+    "answer": "Amazon Comprehend is a managed NLP service that uses machine learning to uncover valuable insights and connections in text. It provides sentiment analysis, entity extraction, key phrase recognition, language detection, and personally identifiable information (PII) masking."
+  },
+  {
+    "id": "faq-012",
+    "category": "AWS Networking",
+    "question": "What is an Amazon VPC and how do subnets provide network isolation?",
+    "answer": "Amazon Virtual Private Cloud (Amazon VPC) lets you provision a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network you define. Public subnets route traffic through an Internet Gateway, while private subnets isolate databases and backend services behind NAT Gateways."
+  }
+]
