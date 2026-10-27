@@ -36,7 +36,21 @@ aws-sbg-tasks/
 │       ├── __init__.py
 │       └── test_pipeline.py  # Automated unit tests for week 01
 │
-├── week-02/                  # Week 02: (Upcoming)
+├── week-02/                  # Week 02: Mini Semantic Search (ChromaDB)
+│   ├── README.md             # Week 02 documentation, architecture & query examples
+│   ├── requirements.txt      # Dedicated dependencies (chromadb, pandas, numpy)
+│   ├── task.py               # Primary task entry point
+│   ├── semantic_search.py    # Core semantic search engine & vector pipeline
+│   ├── task.ipynb            # Executed Google Colab / Jupyter notebook with outputs
+│   ├── semantic_search.ipynb # Executed notebook
+│   ├── data/
+│   │   ├── faqs.json         # Curated AWS & AI/ML FAQ dataset in JSON
+│   │   └── faqs.csv          # Curated AWS & AI/ML FAQ dataset in CSV
+│   └── tests/
+│       ├── __init__.py
+│       └── test_semantic_search.py # Automated unit tests for week 02
+│
+├── week-03/                  # Week 03: (Upcoming)
 │   ├── README.md
 │   ├── task.py
 │   └── task.ipynb
@@ -51,7 +65,7 @@ aws-sbg-tasks/
 | Week | Task Title | Source Code | Notebook / Colab | Status |
 | :---: | :--- | :---: | :---: | :---: |
 | **01** | **Small Python Data-Processing App** (Cleaning + NumPy) | [`task.py`](./week-01/task.py) | [Open in Colab](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/week-01/task.ipynb) | ✅ Completed |
-| **02** | *Week 02 Task* | `week-02/task.py` | `week-02/task.ipynb` | ⏳ Upcoming |
+| **02** | **Mini Semantic Search** (ChromaDB + Vector Embeddings) | [`task.py`](./week-02/task.py) | [Open in Colab](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/week-02/task.ipynb) | ✅ Completed |
 | **03** | *Week 03 Task* | `week-03/task.py` | `week-03/task.ipynb` | ⏳ Upcoming |
 | **04** | *Week 04 Task* | `week-04/task.py` | `week-04/task.ipynb` | ⏳ Upcoming |
 

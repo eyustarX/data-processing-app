@@ -35,3 +35,11 @@ jobs:
     - name: Run Task Application (Week 01)
       run: |
         python week-01/task.py
+
+    - name: Run Unit Tests (Week 02)
+      run: |
+        python -m unittest discover -s week-02/tests -v
+
+    - name: Run Task Application (Week 02)
+      run: |
+        python week-02/task.py
