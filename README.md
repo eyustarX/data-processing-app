@@ -1,62 +1,69 @@
-# 📊 Small Python Data-Processing App
+# 🚀 AWS SBG Tasks
 
-A clean, modular Python application that loads raw datasets, performs multi-stage sanitization using pure functions, and processes calculations with high-performance **NumPy** vectorization.
+Weekly practical coding tasks, assignments, and data engineering projects for the **AWS Student Builder Group (SBG)**.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/notebooks/data_analysis.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/week-01/task.ipynb)
 [![CI Pipeline](https://github.com/eyustarX/data-processing-app/actions/workflows/ci.yml/badge.svg)](https://github.com/eyustarX/data-processing-app/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![NumPy](https://img.shields.io/badge/NumPy-Vectorized-013243?logo=numpy)](https://numpy.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
----
-
-## 📌 Do We Need a Google Colab Link?
-
-**Short answer:** It is **not strictly mandatory** if you only run the project locally via Jupyter Notebook inside your `venv`, but it is **highly recommended**!
-
-### Why include a Colab link?
-1. **Zero-install execution:** Anyone reviewing your repository (evaluators, teammates, recruiters) can click the badge and run your entire pipeline in their browser without setting up Python, virtual environments, or dependencies.
-2. **Best of both worlds:** You satisfy local development standards (`venv` + `requirements.txt`) **and** cloud notebook presentation.
-
-### How the Colab URL Works:
-Once pushed to GitHub, your notebook URL follows this exact pattern:
-```text
-https://colab.research.google.com/github/<YOUR_GITHUB_USERNAME>/<YOUR_REPOSITORY_NAME>/blob/main/notebooks/data_analysis.ipynb
-```
-Replace `<YOUR_GITHUB_USERNAME>` and `<YOUR_REPOSITORY_NAME>` with your actual GitHub username and repository name.
+> *"GitHub repo activity and the quality of projects matter when you look for a job, so make sure you are consistent for your own sake."*
 
 ---
 
-## 📁 Project Architecture
+## 📁 Repository Structure
 
 ```text
-data_processing_app/
-│
+aws-sbg-tasks/
+├── README.md                 # Main repository overview & weekly roadmap
+├── requirements.txt          # Global dependencies for all weekly tasks
+├── .gitignore                # Ignored virtual environments, checkpoints, and caches
+├── LICENSE                   # MIT Open Source License
 ├── .github/
-│   └── workflows/ci.yml         # GitHub Actions automated test & run pipeline
+│   └── workflows/ci.yml      # Automated GitHub Actions test pipeline
 │
-├── data/
-│   ├── raw_sales_data.csv       # Raw dataset containing dirty records, NaNs, duplicates
-│   └── processed_sales_data.csv # Output dataset cleaned and enriched with NumPy metrics
+├── week-01/                  # Week 01: Small Python Data-Processing App
+│   ├── README.md             # Week 01 documentation & Colab badge
+│   ├── task.py               # Primary task entry point
+│   ├── data_processing.py    # Core data cleaning & NumPy processing module
+│   ├── task.ipynb            # Executed Google Colab / Jupyter notebook with plots
+│   ├── data_processing.ipynb # Executed notebook
+│   ├── data/
+│   │   ├── raw_sales_data.csv       # Raw dirty input dataset
+│   │   └── processed_sales_data.csv # Output cleaned & enriched data
+│   └── tests/
+│       ├── __init__.py
+│       └── test_pipeline.py  # Automated unit tests for week 01
 │
-├── notebooks/
-│   └── data_analysis.ipynb      # Interactive Jupyter / Colab notebook with charts & steps
+├── week-02/                  # Week 02: (Upcoming)
+│   ├── README.md
+│   ├── task.py
+│   └── task.ipynb
 │
-├── src/
-│   ├── __init__.py
-│   ├── data_cleaning.py         # Dedicated cleaning functions (dedup, null imputation, etc.)
-│   └── data_processing.py       # NumPy vectorized calculations and statistical metrics
-│
-├── tests/
-│   ├── __init__.py
-│   └── test_pipeline.py         # Automated unit tests for cleaning & NumPy computations
-│
-├── .gitignore                   # Ignore .venv, __pycache__, checkpoints
-├── LICENSE                      # MIT Open Source License
-├── main.py                      # CLI runner script
-├── requirements.txt             # Project dependencies (numpy, pandas, jupyter, matplotlib)
-└── README.md                    # Project documentation & GitHub guide
+└── ...
 ```
+
+---
+
+## 📅 Weekly Task Index
+
+| Week | Task Title | Source Code | Notebook / Colab | Status |
+| :---: | :--- | :---: | :---: | :---: |
+| **01** | **Small Python Data-Processing App** (Cleaning + NumPy) | [`task.py`](./week-01/task.py) | [Open in Colab](https://colab.research.google.com/github/eyustarX/data-processing-app/blob/main/week-01/task.ipynb) | ✅ Completed |
+| **02** | *Week 02 Task* | `week-02/task.py` | `week-02/task.ipynb` | ⏳ Upcoming |
+| **03** | *Week 03 Task* | `week-03/task.py` | `week-03/task.ipynb` | ⏳ Upcoming |
+| **04** | *Week 04 Task* | `week-04/task.py` | `week-04/task.ipynb` | ⏳ Upcoming |
+
+---
+
+## 📌 Submission Standards & Best Practices
+
+1. **Dual Submissions Every Week**: Each week includes both runnable Python source files (`task.py` / `<task_name>.py`) and an executed notebook (`task.ipynb` / `<task_name>.ipynb`) containing cell outputs and data visualizations.
+2. **Dedicated Modular Directories**: Every task is housed in its own isolated directory (`week-01/`, `week-02/`, etc.) with its own documentation and sample data.
+3. **Automated Testing & CI**: All logic is backed by automated unit tests running on Python 3.10, 3.11, and 3.12 via GitHub Actions.
+4. **Cloud-Ready (Google Colab)**: Colab badges are placed in every weekly task README for instant, zero-install browser execution.
+5. **Clean Version Control**: Meaningful commit messages and active, consistent commits showing incremental progress.
 
 ---
 
@@ -75,7 +82,7 @@ cd data-processing-app
   python -m venv .venv
   .\.venv\Scripts\Activate.ps1
   ```
-  *(If PowerShell scripts are restricted, run: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`)*
+  *(If script execution is restricted: `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`)*
 
 - **On macOS / Linux:**
   ```bash
@@ -88,84 +95,24 @@ cd data-processing-app
 pip install -r requirements.txt
 ```
 
-### 4. Run the Application
+### 4. Run Weekly Tasks & Tests
+
+- **Run Week 01 Python Application:**
+  ```bash
+  python week-01/task.py
+  ```
 
 - **Run Automated Unit Tests:**
   ```bash
-  python -m unittest discover -s tests -v
+  python -m unittest discover -s week-01/tests -v
   ```
 
-- **Run via Terminal (CLI):**
+- **Launch Interactive Jupyter Notebook:**
   ```bash
-  python main.py
-  ```
-
-- **Run via Jupyter Notebook:**
-  ```bash
-  jupyter notebook notebooks/data_analysis.ipynb
+  jupyter notebook week-01/task.ipynb
   ```
 
 ---
 
-## 🛠️ Step-by-Step GitHub Setup Guide
-
-Follow these steps to publish this project to GitHub from scratch:
-
-### Step 1: Create a New GitHub Repository
-1. Log in to [GitHub](https://github.com).
-2. Click the **`+`** icon in the top right corner and select **New repository**.
-3. Name your repository (e.g., `data-processing-app`).
-4. Keep it **Public** (required for the Colab badge to open without login prompts).
-5. **Do not** initialize with a README, .gitignore, or license (we already created them).
-6. Click **Create repository**.
-
-### Step 2: Initialize Git and Push Local Code
-Open your terminal in the project directory (`data_processing_app`):
-
-```bash
-# Initialize local git repository
-git init
-
-# Stage all project files
-git add .
-
-# Create the initial commit
-git commit -m "feat: initial commit with data cleaning, numpy processing and jupyter notebook"
-
-# Rename default branch to main
-git branch -M main
-
-# Link to your remote GitHub repository (replace with your URL)
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/data-processing-app.git
-
-# Push code to GitHub
-git push -u origin main
-```
-
-### Step 3: Update the Colab Link in README and Notebook
-1. Open `README.md` and `notebooks/data_analysis.ipynb`.
-2. Replace `YOUR_GITHUB_USERNAME` and `data-processing-app` with your actual GitHub username and repository name.
-3. Commit and push the update:
-   ```bash
-   git add README.md notebooks/data_analysis.ipynb
-   git commit -m "docs: update Colab badge URL with actual repository path"
-   git push
-   ```
-4. Click the badge on your GitHub repository page to test running in Google Colab!
-
----
-
-## 🔬 What This Project Implements
-
-1. **Raw Data Ingestion**: Handles realistic dirty data (negative quantities, missing prices/discounts, invalid string inputs).
-2. **Modular Data Cleaning (`src/data_cleaning.py`)**:
-   - `remove_duplicates()`: Removes duplicate transactions.
-   - `sanitize_numerical_columns()`: Coerces invalid formats and discards invalid values.
-   - `handle_missing_values()`: Imputes default discount and city values; removes incomplete rows.
-3. **NumPy Vectorized Processing (`src/data_processing.py`)**:
-   - High-speed array computations: Gross & Net Revenue calculation.
-   - Normalization: Vectorized Min-Max scaling ($[0, 1]$) and Z-score standardization ($\mu=0, \sigma=1$).
-   - Statistical Analysis: `np.mean()`, `np.median()`, `np.std()`, `np.percentile()`.
-4. **Interactive Notebook & Visualization**:
-   - Bar charts & scatter plots via `matplotlib`.
-   - Fallback dataset mechanism allowing zero-config Colab runs.
+## 📄 License
+This project is licensed under the [MIT License](LICENSE).

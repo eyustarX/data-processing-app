@@ -28,10 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run Unit Tests
+    - name: Run Unit Tests (Week 01)
       run: |
-        python -m unittest discover -s tests -v
+        python -m unittest discover -s week-01/tests -v
 
-    - name: Run Main Application
+    - name: Run Task Application (Week 01)
       run: |
-        python main.py
+        python week-01/task.py

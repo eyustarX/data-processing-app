@@ -1,19 +1,26 @@
-"""Unit tests verifying the data cleaning and NumPy processing modules."""
+"""Unit tests verifying Week 01 data cleaning and NumPy processing pipeline."""
 
+import sys
 import unittest
+from pathlib import Path
 import numpy as np
 import pandas as pd
-from src.data_cleaning import (
+
+# Ensure week-01 directory is on python path for direct imports
+WEEK_01_DIR = Path(__file__).resolve().parent.parent
+if str(WEEK_01_DIR) not in sys.path:
+    sys.path.insert(0, str(WEEK_01_DIR))
+
+from data_processing import (
+    calculate_statistics,
+    calculate_z_scores,
+    clean_dataset_pipeline,
+    compute_financial_metrics,
+    handle_missing_values,
+    load_dataset,
+    normalize_minmax,
     remove_duplicates,
     sanitize_numerical_columns,
-    handle_missing_values,
-    clean_dataset,
-)
-from src.data_processing import (
-    compute_financial_metrics,
-    calculate_statistics,
-    normalize_array_minmax,
-    calculate_z_scores,
 )
 
 
@@ -41,13 +48,13 @@ class TestDataCleaning(unittest.TestCase):
     def test_handle_missing_values(self):
         sanitized = sanitize_numerical_columns(self.sample_raw)
         cleaned = handle_missing_values(sanitized)
-        # Missing discount should be 0.0
+        # Missing discount should default to 0.0
         self.assertFalse(cleaned["discount_pct"].isna().any())
-        # Missing city should be 'Unknown'
+        # Missing city should default to 'Unknown'
         self.assertIn("Unknown", cleaned["city"].values)
 
     def test_clean_dataset_pipeline(self):
-        cleaned = clean_dataset(self.sample_raw)
+        cleaned = clean_dataset_pipeline(self.sample_raw)
         self.assertEqual(len(cleaned), 2)  # only valid orders 1 and 3 survive
 
 
@@ -76,9 +83,9 @@ class TestDataProcessing(unittest.TestCase):
         self.assertEqual(stats["min"], 10.0)
         self.assertEqual(stats["max"], 50.0)
 
-    def test_normalize_array_minmax(self):
+    def test_normalize_minmax(self):
         arr = np.array([0.0, 50.0, 100.0])
-        normalized = normalize_array_minmax(arr)
+        normalized = normalize_minmax(arr)
         np.testing.assert_array_almost_equal(normalized, np.array([0.0, 0.5, 1.0]))
 
     def test_calculate_z_scores(self):
